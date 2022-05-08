@@ -26,7 +26,7 @@
       if( 'geolocation' in navigator ) {
         console.log('ok');
         navigator.geolocation.getCurrentPosition((position) => {
-          msgEl.innerText = position.coords.latitude + ", " + position.coords.longitude + "," + position.timestamp + "," + position.coords;
+          msgEl.innerText = position.coords.latitude + ", " + position.coords.longitude + "," + position.coords.accuracy + ", " + position.timestamp ;
         });
         
       } else {
