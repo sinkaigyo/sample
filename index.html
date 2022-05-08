@@ -20,12 +20,15 @@
       </style>
   </head>
   <body>
-    <h1>sample for babylon.js</h1>
+    <h1 id="msg">sample for babylon.js</h1>
     <script>
+      var msgEl = document.getElementById("msg");
       if( 'geolocation' in navigator ) {
         console.log('ok');
+        msgEl.innerText = 'ok';
       } else {
         console.log('geo ng');
+        msgEl.innerText = 'ng';
       }
     </script>
     <script src="https://cdn.babylonjs.com/babylon.js"></script>
