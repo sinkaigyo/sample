@@ -25,7 +25,10 @@
       var msgEl = document.getElementById("msg");
       if( 'geolocation' in navigator ) {
         console.log('ok');
-        msgEl.innerText = 'ok';
+        navigator.geolocation.getCurrentPosition((position) => {
+          msgEl.innerText = position.coords.latitude + ", " + position.coords.longitude;
+        });
+        
       } else {
         console.log('geo ng');
         msgEl.innerText = 'ng';
